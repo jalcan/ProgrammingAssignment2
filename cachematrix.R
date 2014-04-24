@@ -48,9 +48,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## otherwise, it previously computes the inverse and sets it in the makeCacheMatrix,
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-        
-        
+                        
         i <- x$getinv()
         # Checks if inverse is already in x
         if(!is.null(i)) {
