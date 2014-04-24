@@ -56,13 +56,14 @@ cacheSolve <- function(x, ...) {
         if(!is.null(i)) {
                 message("getting cached data")
                 # @TODO: possible improvement: There should be only one exit point from a function
-                # @TODO: delete this 'return' and use an 'else' for inverse computation
+                # @TODO: delete this 'return' and use an 'else' for inverse computation if needed
                 return(i)
         }
+        # if we didn´t exited the function... 
+        # we need to get the matrix, solve the inverse, set it within the makeCacheMatrix "object" and return it
         data <- x$get()
         i <- solve(data, ...)
         x$setinv(i)
         i
-        
-        
+                
 }
