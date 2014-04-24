@@ -60,7 +60,6 @@ cacheSolve <- function(x, ...) {
                 return(i)
         }
         data <- x$get()
-        print("calculando")
         i <- solve(data, ...)
         x$setinv(i)
         i
